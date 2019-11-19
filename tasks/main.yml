@@ -1,9 +1,10 @@
 ---
-# tasks file for test_vagrant_1
-hosts: all
-tasks:
-  - name: check x
-    command: |
-      whoami
-      pwd
-      hostname
+# tasks file for test_vagrant_1  
+- name: check x
+  command:
+      argv:
+        pwd
+  register: resultx
+
+- debug:
+    var: resultx
