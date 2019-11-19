@@ -1,2 +1,9 @@
 ---
 # tasks file for test_vagrant_1
+hosts: all
+tasks:
+  - name: check x
+    command: |
+      whoami
+      pwd
+      hostname
